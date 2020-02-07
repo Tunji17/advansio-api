@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/mocha \"./test/**/*.spec.js\" --timeout 15000 --exit",
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
