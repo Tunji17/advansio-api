@@ -1,0 +1,9 @@
+Dear {{ name | title }}
+
+Thanks for signing up on Bánkú, to show we care here is a signup bonus (☞ﾟヮﾟ)☞
+
+Your account details are below:
+
+Account Number: {{ accountNumber }}
+Account Type: {{ accountType }}
+Account Balance: {{ accountBalance }}

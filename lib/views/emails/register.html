@@ -1,0 +1,39 @@
+{% extends 'base-email.html' %}
+
+{% block email %}
+<table role="presentation" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <p>Hi {{ name | title }},</p>
+      <p>Thanks for signing up on Bánkú, to show we care here is a signup bonus 😉</p>
+      <p>Your account details are below:</p>
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+        <tbody>
+          <tr>
+            <td align="left">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td>Account Number </td>
+                    <td>{{ accountNumber }}</td>
+                  </tr>
+                  <tr>
+                    <td>Account Type </td>
+                    <td>{{ accountType }}</td>
+                  </tr>
+                  <tr>
+                    <td>Account Balance </td>
+                    <td>₦{{ accountBalance }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
+
+  {{ super() }}
+{% endblock %}

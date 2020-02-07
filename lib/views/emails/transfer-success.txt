@@ -1,0 +1,7 @@
+Dear {{ name | title }}
+
+You have successfull transfered {{ amount }} to {{ recievingAccount }}
+
+Account Number: {{ accountNumber }}
+Account Type: {{ accountType }}
+New Balance: {{ accountBalance }}

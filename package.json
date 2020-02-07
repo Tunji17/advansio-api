@@ -1,0 +1,50 @@
+{
+  "name": "advansio-api",
+  "version": "1.0.0",
+  "description": "api for simple banking app",
+  "main": "app.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/mocha \"./test/**/*.spec.js\" --timeout 15000 --exit",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Tunji17/advansio-api.git"
+  },
+  "author": "Oyetunji",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/boom": "^8.0.1",
+    "@hapi/joi": "^15.1.1",
+    "async-redis": "^1.1.7",
+    "bunyan": "^1.8.12",
+    "cors": "^2.8.5",
+    "cron": "^1.7.2",
+    "dotenv": "^6.2.0",
+    "express": "^4.17.1",
+    "fflip": "^4.0.0",
+    "helmet": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mailgun-js": "^0.22.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.7",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.9.1",
+    "nunjucks": "^3.2.0",
+    "rabbot": "^2.1.0",
+    "redis": "^2.8.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.5.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.2",
+    "nodemon": "^1.18.10",
+    "nyc": "^14.1.1"
+  }
+}

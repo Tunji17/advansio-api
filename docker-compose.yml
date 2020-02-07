@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  mongo:
+    image: mongo:3.6.6
+    container_name: advansio-mongodb
+    volumes:
+      - ./docker/data/mongo:/data/db
+    ports:
+      - "27017:27017"
+
+  rabbitmq:
+    image: rabbitmq:3.7.4-management
+    container_name: advansio-rabbitmq
+    volumes:
+      # Warning: This volume mapping is not officially documented
+      - ./docker/data/rabbitmq:/var/lib/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    hostname: rabbitmq
+
+  app:
+    build: .
+    container_name: advansio-api
+    command: yarn dev
+    depends_on:
+     - rabbitmq
+     - mongo
+    environment:
+     - MONGODB_URL=mongodb://mongo/advansio
+     - RABBITMQ_URI=amqp://guest:guest@rabbitmq
