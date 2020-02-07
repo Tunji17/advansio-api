@@ -9,7 +9,7 @@ describe('User', () => {
       await user.validate();
     } catch (error) {
       expect(error.name).to.equal('ValidationError');
-      expect(error.message).to.eql('User validation failed: name: Please provide a name');
+      expect(error.message).to.eql('User validation failed: name: Please provide your name');
     }
   });
   it('should create hash and salt from a password', (done) => {
