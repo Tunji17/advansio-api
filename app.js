@@ -13,7 +13,7 @@ const apiRoutes = require('./lib/routes');
 const app = express();
 
 app.use((req, res, next) => {
-  const allowedOrigins = ['http://localhost:3000'];
+  const allowedOrigins = ['http://localhost:3000', 'https://banku-react.herokuapp.com'];
   const { origin } = req.headers;
   if (allowedOrigins.indexOf(origin) > -1) {
     res.setHeader('Access-Control-Allow-Origin', origin);
