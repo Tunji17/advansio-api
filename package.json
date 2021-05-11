@@ -25,7 +25,7 @@
     "fflip": "^4.0.0",
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "mailgun-js": "^0.22.0",
     "moment": "^2.24.0",
     "mongoose": "^5.7.7",
